@@ -1,0 +1,11 @@
+<sly data-sly-use.blog="com.myaem.core.models.BlogBannerModel">
+    <main role="main" class="container">
+        <img src="${blog.bannerImage}" class="banner" alt="${blog.bannerAltName}"/>
+    </main>
+</sly>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='driveAem.page'}"/>
+    <sly data-sly-call="${clientlib.js @ categories='driveAem.page'}"/>
+</sly>
+<sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>

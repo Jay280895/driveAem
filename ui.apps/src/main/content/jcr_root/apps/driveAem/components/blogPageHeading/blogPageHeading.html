@@ -1,0 +1,15 @@
+<div class="row" data-sly-use.headingData="com.myaem.core.models.BlogPageHeadingModel">
+    <div class="col-md-8 blog-main">
+
+        <div class="blog-post">
+            <h2 class="blog-post-title">${headingData.heading}</h2>
+            <p class="blog-post-meta">${headingData.datePicker} by <a href="index.html#">${headingData.writerName}</a></p>
+        </div>
+    </div>
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='driveAem.page'}"/>
+    <sly data-sly-call="${clientlib.js @ categories='driveAem.page'}"/>
+</sly>
+<sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
